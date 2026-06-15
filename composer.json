@@ -1,0 +1,39 @@
+{
+    "name": "bleeld/think-sms",
+    "description": "ThinkPHP 8 短信服务插件，支持阿里云、腾讯云等多厂商短信服务",
+    "type": "library",
+    "keywords": [
+        "thinkphp",
+        "sms",
+        "aliyun",
+        "qcloud",
+        "短信"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bleeld",
+            "email": "support@bleeld.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "bleeld\\sms\\": "src/"
+        }
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "bleeld\\sms\\Service"
+            ],
+            "config": {
+                "sms": "config/sms.php"
+            }
+        }
+    }
+}
